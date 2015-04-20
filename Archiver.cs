@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Common.Logging;
 using Quartz;
 using TrelloNet;
-using Common.Logging;
 
 namespace TrelloArchiver
 {
@@ -16,7 +14,6 @@ namespace TrelloArchiver
   public class ArchiverJob : IJob
   {
     private string _key;
-    private string _secret;
     private string _authToken;
     private ITrello _trello;
     private ILog _log = LogManager.GetCurrentClassLogger();
@@ -28,7 +25,6 @@ namespace TrelloArchiver
     public ArchiverJob(ITrello trello = null, string key = null, string secret = null)
     {
       this._key = key ?? System.Configuration.ConfigurationManager.AppSettings["trellokey"];
-      this._secret = secret ?? System.Configuration.ConfigurationManager.AppSettings["trellosecret"];
       this._authToken = System.Configuration.ConfigurationManager.AppSettings["trelloauthtoken"];
       this._trello = trello ?? new Trello(this._key);
       if(_authToken == null) {

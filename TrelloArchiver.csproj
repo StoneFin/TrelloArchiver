@@ -72,6 +72,10 @@
       <HintPath>packages\Topshelf.3.1.4\lib\net40-full\Topshelf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Topshelf.Common.Logging, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Topshelf.Common.Logging.1.0.1.0\lib\net40\Topshelf.Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="TrelloNet, Version=0.6.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\TrelloNet.0.6.2\lib\net40-Client\TrelloNet.dll</HintPath>
       <Private>True</Private>
@@ -81,6 +85,7 @@
     <Compile Include="Archiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scheduler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
